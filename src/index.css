@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Nunito:wght@200;300;400;600;700&family=Roboto:wght@100&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.ant-table-thead > tr > th {
+  color: white !important;
+  background: #101d2c !important;
+  font-weight: 600 !important;
+  padding: '2px' !important;
+}
+
+.ant-table-tbody > tr {
+  background: #ffffff !important;
+}
+
+.ant-table-tbody > tr.ant-table-row > td {
+  font-size: small;
+  font-weight: 900 !important;
+}
+
+.ant-table-tbody > tr.ant-table-row:hover > td {
+  background: #f6f9fc !important;
+  cursor: pointer;
+  font-weight: 800;
+}
+.ant-carousel .slick-slide {
+  height: 160px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.ant-carousel .slick-slide > div {
+  display: flex;
+  justify-content: center;
+}
+
+::-webkit-scrollbar {
+  z-index: 10;
+  overflow-y: hidden;
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #001529;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(85, 85, 85);
+}
+
+.container {
+  height: 50px;
+  width: 300px;
+}
+
+.character {
+  line-height: 50px;
+  font-size: 36px;
+  color: white;
+  background-color: rgba(253, 253, 253, 0.712);
+  border: 1px solid transparent;
+  border-radius: 8px;
+  margin-left: 8px;
+}
+
+.character:first-child {
+  margin-left: 0;
+}
+
+.character--inactive {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.character--selected {
+  border: 1px solid white;
+}

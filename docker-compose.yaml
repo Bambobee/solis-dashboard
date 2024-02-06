@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  front-end:
+    build:
+      target: development
+      context: .
+    container_name: wave_clienet
+    image: wave_clienet
+    volumes:
+      - ./src:/app/src
+    ports:
+      - 3000:3000
+    stdin_open: true
+    tty: true
+
+    command: npm start
