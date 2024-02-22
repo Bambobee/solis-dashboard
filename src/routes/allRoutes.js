@@ -24,7 +24,8 @@ function AppRoutes() {
   return (
     <BrowserRouter history={history}>
       <Routes>
-        <Route path="/" element={<App />} />
+        {/* <Route path="/" element={<App />} /> */}
+        <Route path="/" element={<Dashboard />} />
         <Route path="/onboarding" element={<Onboarding />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<SignupScreen />} />
@@ -34,7 +35,7 @@ function AppRoutes() {
           path="/dashboard"
           element={
             <RequireAuth>
-              <Dashboard />{' '}
+              <Dashboard />
             </RequireAuth>
           }>
           <Route

@@ -14,7 +14,7 @@ const RequireAuth = ({ children }) => {
     }
   }, [auth]);
 
-  return auth.isAuthenticated === true ? (
+  return auth.isAuthenticated === false ? (
     children
   ) : (
     <Navigate

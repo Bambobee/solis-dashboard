@@ -35,9 +35,9 @@ function Products() {
     // setShow(false)
   }, [productList]);
 
-  const { name } = {
-    name: company.map((a) => a.name)
-  };
+  // const { name } = {
+  //   name: company.map((a) => a.name)
+  // };
 
   const handleOpen = () => {
     setShow(true);
@@ -79,7 +79,7 @@ function Products() {
             <div>Action</div>
           </div>
           <div className="flex flex-col items-center w-full-h-auto">
-            {loading ? (
+            {/* {loading ? (
               <Spin indicator={antIcon} size="large" />
             ) : (
               <div className="bg-white h-auto w-full">
@@ -89,7 +89,14 @@ function Products() {
                   products.map((element, _id) => <ProductComponent key={_id} product={element} />)
                 )}
               </div>
-            )}
+            )} */}
+               <div className="bg-white h-auto w-full">
+                {products === [] || products === null || products === 'undefined' ? (
+                  <h1>No Products</h1>
+                ) : (
+                  products.map((element, _id) => <ProductComponent key={_id} product={element} />)
+                )}
+              </div>
           </div>
         </div>
       </div>

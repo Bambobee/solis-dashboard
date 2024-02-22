@@ -61,9 +61,11 @@ function Customers() {
     // }
   }, [customer]);
 
-  const { name } = {
-    name: company.map((a) => a.name)
-  };
+
+
+  // const { name } = {
+  //   name: company.map((a) => a.name)
+  // };
 
   return (
     <>
@@ -74,7 +76,7 @@ function Customers() {
         ) : (
           <div className="flex flex-col px-2 py-3 lg:flex-row justify-between">
             <h1 className="mt-4 text-[1.5rem] font-bold text-gray-900 md:text-[2rem]  lg:text-[2rem]">
-              {name + ' ' + 'Customer list'}{' '}
+              {/* {name + ' ' + 'Customer list'}{' '} */}
             </h1>
             <div className="flex flex-row w-auto justify-between items-center">
               <button
@@ -99,17 +101,24 @@ function Customers() {
             <div>Action</div>
           </div>
           <div className="flex flex-col items-center  w-full-h-auto">
-            {loading ? (
+            {/* {loading ? (
               <Spin indicator={antIcon} size="large" />
             ) : (
               <div className="bg-white h-auto w-full">
-                {clients === null || clients === 'undefined' ? (
+                 {clients === null || clients === 'undefined' ? (
                   <div>No customers</div>
                 ) : (
                   clients.map((element, _id) => <ClientComponent key={_id} client={element} />)
                 )}
               </div>
-            )}
+            )} */}
+            <div className="bg-white h-auto w-full">
+                 {clients === null || clients === 'undefined' ? (
+                  <div>No customers</div>
+                ) : (
+                  clients.map((element, _id) => <ClientComponent key={_id} client={element} />)
+                )}
+              </div>
           </div>
         </div>
       </div>

@@ -90,7 +90,7 @@ function Invoice() {
         <div onClick={handleShowStats} className={sx}>
           {showStats ? 'Collapse Statistics' : 'Expand Statistics'}
         </div>
-        {showStats && <OverallStatistics data={cardData} />}
+        {showStats && <Statistics data={cardData} />}
         <div onClick={handleShowFilters} className={sx}>
           {showFilters ? 'Collapse Filters' : 'Expand Filters'}
         </div>

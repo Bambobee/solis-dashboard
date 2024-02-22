@@ -5,7 +5,8 @@ import './App.css';
 // import Login from './components/loginScreen';
 
 function App() {
-  return <Login />;
+  // return <Login />;
+  return < Dashboard/>;
 }
 
 export default App;

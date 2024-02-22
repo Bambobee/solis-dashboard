@@ -109,12 +109,12 @@ function SingleInvoiceComponent() {
     setBusiness(product.business);
   }, [product.business]);
 
-  const { name, currency, address, id } = {
-    name: business.map((a) => a.name),
-    currency: business.map((a) => a.currency),
-    address: business.map((a) => a.address),
-    id: business.map((a) => a._id)
-  };
+  // const { name, currency, address, id } = {
+  //   name: business.map((a) => a.name),
+  //   currency: business.map((a) => a.currency),
+  //   address: business.map((a) => a.address),
+  //   id: business.map((a) => a._id)
+  // };
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -129,7 +129,7 @@ function SingleInvoiceComponent() {
     return () => clearTimeout(timer);
   }, []);
 
-  const owner = id;
+  // const owner = id;
   const handleSave = (e) => {
     e.preventDefault();
     let c_id, customerName;
@@ -240,13 +240,14 @@ function SingleInvoiceComponent() {
             </button>
           </div>
         </div>
-        <InvoiceHeader business={business} name={name} address={address} user={user} />
+        {/* <InvoiceHeader business={business} name={name} address={address} user={user} /> */}
+        <InvoiceHeader business={business} name={name}  />
         <BillToSection
           status="draft"
           client={client}
           handleCustomer={handleCustomer}
           inputData={inputData}
-          currency={currency}
+          // currency={currency}
           invoiceDate={invoiceDate}
           invoiceNumber={invoiceNumber}
           orderNumber={orderNumber}
@@ -264,7 +265,7 @@ function SingleInvoiceComponent() {
         {/* Total and subtotal section */}
         <InvoiceFooter
           inputs={inputData}
-          currency={currency}
+          // currency={currency}
           grand={sum}
           handleVat={handleVat}
           vat={vat}

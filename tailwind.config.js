@@ -8,7 +8,9 @@ module.exports = {
     colors: {
       primary: 'var(--theme-primary)',
       secondary: 'var(--theme-secondary)',
-      'text-base': 'var(--theme-text-base)'
+      'text-base': 'var(--theme-text-base)',
+      customBlue: '#2F4D88',
+      cutomText: '2px 2px 4px rgba(47, 188, 72, 0.7)'
     },
     extend: {
       fontFamily: {
